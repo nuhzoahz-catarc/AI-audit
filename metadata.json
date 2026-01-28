@@ -1,0 +1,5 @@
+{
+  "name": "智能报告审核", // 应用名称
+  "description": "An intelligent Word document inspection and approval tool powered by Gemini. Batch process reports, verify logic rules (dates, numeric limits), and generate audit summaries instantly.", // 应用描述：基于 Gemini 的智能 Word 文档审查工具，支持批量处理、逻辑校验（日期、数值）并生成摘要。
+  "requestFramePermissions": [] // 请求的特殊权限列表（如摄像头、麦克风等），当前为空，不需要特殊权限
+}
