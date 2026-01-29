@@ -83,7 +83,7 @@ export default async function handler(req: any, res: any) {
         'Authorization': `Bearer ${apiKey}`, // 阿里云API Key认证
       },
       body: JSON.stringify({
-        model: 'qwen-max', // 通义千问轻量版（免费/低成本，稳定）
+        model: 'qwen-turbo', // 通义千问轻量版（免费/低成本，稳定）
         input: {
           messages: [{ 
             role: 'user', 
@@ -92,8 +92,8 @@ export default async function handler(req: any, res: any) {
         },
         parameters: {
           result_format: 'json',
-          temperature: 0.05, // 0.1表示回答更精准，不随意
-          max_tokens: 8192, // 最大返回字符数
+          temperature: 0.1, // 0.1表示回答更精准，不随意
+          max_tokens: 4096, // 最大返回字符数
         },
       }),
     });
