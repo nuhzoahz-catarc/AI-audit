@@ -76,14 +76,14 @@ export default async function handler(req: any, res: any) {
     `;
 
     // 调用阿里云通义千问API（不用SDK，直接发HTTP请求）
-    const response = await fetch("https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation", {
+    const response = await fetch("https://close-whale-50.deno.dev/api.groq.com/openai/v1/chat/completions", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`, // 阿里云API Key认证
       },
       body: JSON.stringify({
-        model: 'qwen-turbo', // 通义千问轻量版（免费/低成本，稳定）
+        model: 'openai/gpt-oss-120b', // 通义千问轻量版（免费/低成本，稳定）
         input: {
           messages: [{ 
             role: 'user', 
